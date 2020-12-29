@@ -3,10 +3,9 @@
 <ul>
   <% @articles.each do |article| %>
     <li>
-      <%# We use the _path as a helper. article_path returns /articles/#{article.id} %>
-      <a href="<%= article_path(article) %>">
-      <%= article.title %>
-      </a>
+      <%# link_to takes as first argument the link's text, and as second
+      argument the link's destination %>
+      <%= link_to article.title, article %>
     </li>
   <% end %> 
 </ul>
